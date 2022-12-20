@@ -1,0 +1,86 @@
+<div class="body">
+<div class="container">
+    <div class="row d-flex">
+        
+        <!-- phone -->
+        <div class="col-lg-3 mt-1">
+            <div id="phone">
+                <div class="img"><img src="https://www.happierhuman.com/wp-content/uploads/2022/07/glass-half-full-type-persons-lessons-learned.jpg"></div>
+                <div class="gallery">
+                    <ul>
+                    <li id="id1"  style=" border-radius: 5px; text-align: center; background-color:cyan; font-family: 'Rubik Vinyl', cursive; "><i class="fa-solid fa-house"></i><br>Home</li>
+                    <li id="id1"  style=" border-radius: 5px; text-align: center; background-color:rgb(18, 224, 18); font-family: 'Rubik Vinyl', cursive;"><i class="fa-solid fa-user-plus"></i><br>Add</li>
+                    <li id="id1"  style=" border-radius: 5px; text-align: center; background-color:yellow; font-family: 'Rubik Vinyl', cursive;"><i class="fa-solid fa-eye"></i><br>View</li>
+                    <li id="id1"  style=" border-radius: 5px; text-align: center; background-color:rgb(65, 65, 240); font-family: 'Rubik Vinyl', cursive;"><i class="fa-regular fa-pen-to-square"></i><br>Edit</li>
+                    <li id="id1"  style=" border-radius: 5px; text-align: center; background-color:rgb(221, 95, 116); font-family: 'Rubik Vinyl', cursive;"><i class="fa-solid fa-camera-retro"></i><br>Cam</li>
+                    <li id="id1"  style=" border-radius: 5px; text-align: center; background-color:red; font-family: 'Rubik Vinyl', cursive;"><i class="fa-solid fa-trash" style=" width: 80px;"></i><br>Delete</li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+<div class="col-lg-1"></div>
+
+
+       
+        <!-- content and heading -->
+
+        <div class="col-lg-8 border border-3 mt-4 ">
+            <a routerLink="/contacts/add/" class="btn btn-success mt-3" style="width: 160px; float: right;">Add New Contact</a>
+
+        <h1 class="mt-5">IN <i class="fa-solid fa-hand-point-up" style="color: wheat;"></i> TOUCH</h1>
+                    <div class="content">
+            <p id="about" class="me-3-"><span>Who we are </span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non nulla qui iste reiciendis pariatur ipsum eos dolore, sequi officia. Voluptatem dolorem culpa ea, labore consectetur magni iure fugit. Deserunt, sed!
+            Sunt sit provident facere animi reiciendis debitis? Quibusdam, possimus. Officia animi ipsum nam veritatis facere nulla numquam consectetur, nesciunt id reprehenderit architecto doloremque illo. Fuga voluptatem eos reiciendis modi laborum?
+            Eum quibusdam harum quidem illo delectus nam, rem, recusandae et unde itaque neque nesciunt sapiente libero est expedita enim fuga 
+        </div>
+        <input (keyup)="search($event)" type="text" placeholder="search contact" class="form-control">
+        </div>
+    </div>
+    </div> 
+    <!-- row closed above -->
+
+    <!-- <pre>
+        {{allContacts | json}}
+    </pre> -->
+
+
+    <!-- data details -->
+
+
+<div class="container">
+        <div class="row g-0  mt-5">
+          <div class="col-lg-6 " *ngFor="let contact of allContacts | filter : searchKey : 'name' ">
+            <div class="card mb-2 mt-2  d-flex  bg-secondary" style="max-width: 540px;" >
+       <div class="row align-items-center">
+
+        <div class="col-lg-3 mb-3 ">
+            <img [src]="contact.photo" class="img-fluid rounded-start" alt="...">
+        </div>
+         
+          <div class="col-lg-7">
+            <!-- <div class="card-body"> -->
+              <h5 class="card-title ms-2 mt-1"><b>{{contact.name}}</b></h5>
+              <ul class="list-group  ">
+                <li class="list-group-item">email: <b>{{contact.email}}</b></li>
+                <li class="list-group-item">Mobile:<b>{{contact.mobile}}</b></li>
+                <li class="list-group-item">Relation<b></b></li>
+
+            </ul>
+        </div>
+    <div class="col-lg-1  mt-4 ">
+        <ul id="data-btn">
+        <li class="mb-3"><a routerLink="/contacts/view/{{contact.id}}" class="btn" style=" width: 40px;  background-color:yellow;"><i class="fa-solid fa-eye"></i><br></a></li>
+        <li class="mb-3"><a routerLink="/contacts/update/{{contact.id}}" class="btn" style=" width: 40px; background-color:rgb(65, 65, 240);"><i class="fa-regular fa-pen-to-square"></i><br></a></li>
+        <li><button class="btn" style=" width: 40px;  background-color:red; height: 40px;"><i class="fa-solid fa-trash"></i></button></li>
+    </ul>
+    </div>
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+
+    

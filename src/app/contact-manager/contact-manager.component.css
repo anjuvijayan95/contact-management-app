@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Kenia&family=La+Belle+Aurore&family=Lobster&family=Monoton&family=Pacifico&family=Playfair+Display:ital@1&family=Rubik+Vinyl&family=Ubuntu&display=swap');
+
+/* content and heading css */
+ul{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(45deg, #013A6B 55%, #004E95 55%);
+    height: 1500px;
+    width: 100%;
+  }
+
+  h1{
+    font-family: 'Rubik Vinyl', cursive;
+    font-size: 80px;
+    color:darkturquoise;
+    font-weight: bold;
+}
+
+.content{
+    float: right;    
+}
+#about{
+text-align: justify;
+/* width:600px; */
+color: wheat;
+font-family: 'Kenia', cursive;
+font-size: 20px;
+}
+span{
+    font-size: 50px;
+}
+
+
+
+/* phone model css */
+
+#phone{
+    border: 5px solid darkseagreen;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 258px; 
+    height:520px; 
+    /* transform: skewY(-15deg); */
+    /* transform: rotate(20deg); */
+}
+img{
+    margin-top: 30px;
+    margin-left: 11px;
+    border: 2px solid wheat;
+    border-radius: 18px;
+    width:225px;
+    height:160px;
+}
+.gallery{
+    background-color: rgba(241, 241, 219,.5);
+    width: 230px;
+    height: 260px;
+    margin: 40px 8px 0px;
+    border: 2px solid wheat;
+    border-radius: 10px;
+}
+.gallery ul{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding:0px 10px;
+}
+.gallery ul li{
+list-style: none;
+flex: 1 1 25%;
+margin:5px;
+}
+#id1,#id2,#id3,#id4,#id5,#id6{
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 2px 3px darkseagreen;
+    font-weight: bold;
+}
+
+
+
+/* data */
+.btn{
+width:70px
+}
+#data-btn{
+    list-style: none;
+}

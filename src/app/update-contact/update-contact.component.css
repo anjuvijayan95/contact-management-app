@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Kenia&family=La+Belle+Aurore&family=Lobster&family=Monoton&family=Pacifico&family=Playfair+Display:ital@1&family=Rubik+Vinyl&family=Ubuntu&display=swap');
+
+.body{
+    background-color: rgb(218, 218, 240);
+    width: 100%;
+    height: 650px;
+}
+.contact-img{
+    width: 200px;
+}
+

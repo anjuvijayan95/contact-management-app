@@ -1,0 +1,60 @@
+<div class="body">
+    <div class="container title">
+        <div class="row">
+            <div class="col">
+                <h1 class=" mt-2" style="font-family: 'Rubik Vinyl', cursive; font-weight:bolder; text-align:center;">In
+                <i class="fa-regular fa-hand-point-right" style="color: wheat;"></i> Touch</h1>
+                <p class="text-justify mt-3 fs-5" style="text-align:justify; font-family: 'Kenia', cursive;">
+                Please enter your following details Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam laboriosam vel itaque accusantium enim placeat culpa incidunt perferendis. Mollitia illo nam eligendi nostrum expedita, nesciunt necessitatibus soluta ex voluptate labore?
+                Rerum nisi quam labore praesentium distinctio consequuntur alias voluptatum suscipit repellendus dolor sint consequatur ad amet incidunt quasi necessitatibus corporis ducimus in et, cumque magnam temporibus nesciunt exercitationem! Quos, dolorum.
+                Maxime atque quo nisi tempora officiis! Sed facere fuga facilis cumque nihil quia fugiat soluta possimus omnis adipisci, consequuntur quae 
+            </div>
+        </div>
+    
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                <div class="col-md-8">
+            <form class=" border border-secondary border-3 mt-1">
+                <div class="head" style="background-color: darkblue;">
+                <h2 class=" ms-5 text-light" style="font-family: 'Rubik Vinyl', cursive">Add to Contact</h2>
+                </div>
+                <div class="row m-3 ">
+                    <div class="col-sm-10 d-flex">
+                    <input name="contactGuy" [(ngModel)]="contactName" type="text" placeholder="Enter your name" class="form-control m-2">
+                    <input type="text" placeholder="Email Id" class="form-control m-2">
+                </div>
+            </div>
+        
+            <div class="row m-3">
+                <div class="col-md-10  d-flex">
+                    <input type="text" placeholder="photo url" class="form-control m-2">
+                    <input type="text" placeholder="Mobile Number" class="form-control m-2">
+                    <input type="text" placeholder="Company" class="form-control m-2">
+                </div>
+            
+    
+            <div class="row mt-3">
+                <div class="col-md-6  d-flex ">
+                    <input type="text" placeholder="Designation" class="form-control m-2">
+                    <select name="relation" class="form-control m-2">
+                        <option value="" selected hidden disabled>Select</option>
+                        <option value="" *ngFor="let group of allGroup">{{group.name}}</option>
+                        
+                    </select>
+                </div>
+            </div>
+        </div>
+    
+        <button (click)="addContact()" value="create" class="btn btn-success me-5 mb-3 fs-5" style="float:right;">Create</button>
+        <a routerLink="/" class="btn btn-warning ms-5 mb-3 fs-5" >Back</a>
+     </form>
+        </div>
+        <div class="col-md-3 mt-5">
+            <div><img src="https://static.thenounproject.com/png/3183052-200.png" class="border border-secondary border-3">
+        </div>
+        </div>
+    </div>
+    </div>

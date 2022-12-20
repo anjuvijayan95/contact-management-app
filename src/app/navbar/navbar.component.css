@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Kenia&family=La+Belle+Aurore&family=Lobster&family=Monoton&family=Pacifico&family=Playfair+Display:ital@1&family=Rubik+Vinyl&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .navbar{
+height: 90px;
+} */
+a{
+    padding-left: 20px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    padding-right: 50px;
+    font-weight: bold;
+}
+li{
+    margin: 10px
+}
