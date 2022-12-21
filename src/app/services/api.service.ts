@@ -41,6 +41,11 @@ getGroupName(groupId:string){
   addContacts(contactBody:any){
   return this.http.post(this.baseUrl,contactBody)
   }
+
+// function for delete
+deleteContact(contactId:any){
+ return this.http.delete(`${this.baseUrl}/${contactId}`)
+}
 }
 
 

@@ -18,15 +18,32 @@ export class ContactManagerComponent implements OnInit {
   //ngOnInit whrn we craete a component it have one lifecycle and it will have a value, to initiate that value we use this method
   //if the value is change then the ngOnInitChange method will invoke automatically (check lifecycle hooks in google)
   ngOnInit(): void{
-    this.api.getAllContacts().subscribe((data:any)=>{  //function in api().subscribe((data:its type)=>)
-      console.log(data);
-      this.allContacts=data
-    })
+    this.getAllContact()
+   
   }
 
+getAllContact(){
+  this.api.getAllContacts()
+  .subscribe((data:any)=>{  //function in api().subscribe((data:its type)=>)
+    console.log(data);
+    this.allContacts=data
+  })
+}
+
+
+  //search
   search(event:any){
     console.log(event.target.value);
     this.searchKey=event.target.value
     
+  }
+
+  deleteContact(contactId:any){
+    this.api.deleteContact(contactId)
+    .subscribe((data:any)=>{
+      this.getAllContact()
+      // window.location.reload()
+    }
+    )
   }
 }

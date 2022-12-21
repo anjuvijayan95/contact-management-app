@@ -8,7 +8,7 @@ ul{
 .body{
     background-color: #013A6B;
     background-image: -webkit-linear-gradient(45deg, #013A6B 55%, #004E95 55%);
-    height: 1500px;
+    height: 100%;
     width: 100%;
   }
 
