@@ -32,8 +32,7 @@ console.log(this.groupId);
 
 
 this.api.getGroupName(this.groupId)
-.subscribe(
-(result:any)=>{
+.subscribe((result:any)=>{
 this.groupName=result.name
 }
 )

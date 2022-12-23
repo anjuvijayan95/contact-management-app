@@ -11,7 +11,9 @@
             </div>
         </div>
     
-    
+    <!-- <pre>
+        {{contact | json}}
+    </pre> -->
         <div class="container">
             <div class="row">
                 <div class="col-md-1"></div>
@@ -23,38 +25,37 @@
                 </div>
                 <div class="row m-3 ">
                     <div class="col-sm-10 d-flex">
-                    <input type="text" placeholder="Enter your name" class="form-control m-2">
-                    <input type="text" placeholder="Email Id" class="form-control m-2">
+                    <input name="cName" [(ngModel)]="contact.name" type="text" placeholder="Enter your name" class="form-control m-2">
+                    <input name="cEmail" [(ngModel)]="contact.email" type="text" placeholder="Email Id" class="form-control m-2">
                 </div>
             </div>
         
             <div class="row m-3">
                 <div class="col-md-10  d-flex">
-                    <input type="text" placeholder="photo url" class="form-control m-2">
-                    <input type="text" placeholder="Mobile Number" class="form-control m-2">
-                    <input type="text" placeholder="Company" class="form-control m-2">
+                    <input name="cPhoto" [(ngModel)]="contact.photo" type="text" placeholder="photo url" class="form-control m-2">
+                    <input name="cNumber" [(ngModel)]="contact.mobile" type="text" placeholder="Mobile Number" class="form-control m-2">
+                    <input name="cCompany" [(ngModel)]="contact.company" type="text" placeholder="Company" class="form-control m-2">
                 </div>
             
     
             <div class="row mt-3">
                 <div class="col-md-6  d-flex ">
-                    <input type="text" placeholder="Designation" class="form-control m-2">
-                    <select name="relation" class="form-control m-2">
+                    <input name="cTitle" [(ngModel)]="contact.title" type="text" placeholder="Designation" class="form-control m-2">
+                    <select name="groupId" [(ngModel)]="contact.groupId" class="form-control m-2">
                         <option value="" selected hidden disabled>Select</option>
-                        <option value="">Family</option>
-                        <option value="">Friend</option>
-                        <option value="">Coliuge</option>
+                        <option value="" *ngFor="let group of groups">{{group.name}}</option>
+ 
                     </select>
                 </div>
             </div>
         </div>
     
-        <button value="create" class="btn btn-success me-5 mb-3 fs-5" style="float:right;">Update</button>
+        <button value="create" (click)="updateContact()" class="btn btn-success me-5 mb-3 fs-5" style="float:right;">Update</button>
         <a routerLink="/" class="btn btn-warning ms-5 mb-3 fs-5" >Back</a>
      </form>
         </div>
         <div class="col-md-3 mt-5">
-            <div><img src="https://static.thenounproject.com/png/3183052-200.png" class="border border-secondary border-3">
+            <div><img [src]="contact.photo" class="border border-secondary border-3" style="width: 200px;">
         </div>
         </div>
     </div>
